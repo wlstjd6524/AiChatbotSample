@@ -1,0 +1,169 @@
+/* ===== Floating Button ===== */
+.cb-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ===== Panel ===== */
+.cb-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  width: min(360px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 120px));
+  z-index: 2147483647;
+
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Header ===== */
+.cb-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  background: #0f0f0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cb-title {
+  font-weight: 800;
+  color: #fff;
+}
+
+.cb-close {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===== Body ===== */
+.cb-body {
+  padding: 12px;
+  overflow: auto;
+  height: 320px;
+}
+
+.cb-date {
+  font-size: 12px;
+  color: #9a9a9a;
+  text-align: center;
+  margin: 6px 0 12px;
+}
+
+/* ===== Messages ===== */
+.cb-msg {
+  display: flex;
+  margin: 8px 0;
+}
+
+.cb-bubble {
+  max-width: 82%;
+  padding: 10px 12px;
+  line-height: 1.35;
+  font-size: 14px;
+  word-break: break-word;
+
+  white-space: pre-line;
+}
+
+/* ✅ 유저 메시지 = 빨강 */
+.cb-msg.is-user {
+  justify-content: flex-end;
+}
+.cb-msg.is-user .cb-bubble {
+  background: #e53935; /* 빨강 */
+  color: #fff;
+  border-radius: 18px 18px 4px 18px;
+}
+
+/* ✅ 챗봇 메시지 = 살짝 진한 회색 */
+.cb-msg.is-bot {
+  justify-content: flex-start;
+}
+.cb-msg.is-bot .cb-bubble {
+  background: #2a2a2a; /* 진회색 */
+  color: #eaeaea;
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* ===== Quick chips ===== */
+.cb-quick {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  overflow-x: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: #111;
+}
+
+.cb-chip {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ===== Input ===== */
+.cb-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ✅ “메세지 보내는 칸” 포인트 = 빨강 (테두리/포커스) */
+.cb-input input {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 2px solid #e53935;
+  background: #111;
+  color: #fff;
+  outline: none;
+}
+
+.cb-input input::placeholder {
+  color: #9a9a9a;
+}
+
+.cb-input input:focus {
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.25);
+}
+
+/* 전송 버튼 = 빨강 */
+.cb-input button {
+  height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #e53935;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cb-input button:hover {
+  background: #d32f2f;
+}
